@@ -516,12 +516,14 @@ function render(C) {
   }), { threshold: 0.15 });
   document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
 
-  /* 공유 */
-  $("#copyLink").onclick = () => copy(location.href);
+  /* 공유: 문구 없이 링크만 전달 → 카카오톡에서 미리보기 카드만 보임
+     (?나 # 뒤의 꼬리는 떼어서 항상 같은 주소로 → 미리보기도 항상 같게) */
+  const shareUrl = location.origin + location.pathname;
+  $("#copyLink").onclick = () => copy(shareUrl);
   $("#shareBtn").onclick = async () => {
     if (navigator.share) {
-      try { await navigator.share({ title: document.title, text: dateText, url: location.href }); } catch {}
-    } else copy(location.href);
+      try { await navigator.share({ url: shareUrl }); } catch {}
+    } else copy(shareUrl);
   };
 
   /* 연락하기 */
