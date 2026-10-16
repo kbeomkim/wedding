@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>임채근 ♥ 김예진 결혼합니다</title>
+<meta name="description" content="2027년 5월 15일 토요일 오후 12시 30분, 그랜드웨딩홀 그랜드볼룸">
+<!-- 카카오톡/문자 공유 미리보기 (관리자 페이지 설정이 반영되지 않으니 여기서 직접 수정) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kbeomkim.github.io/wedding/">
+<meta property="og:title" content="임채근 ♥ 김예진 결혼합니다">
+<meta property="og:description" content="2027년 5월 15일 토요일 오후 12시 30분">
+<meta property="og:image" content="https://kbeomkim.github.io/wedding/images/cover.jpg">
+<meta name="theme-color" content="#f7f3ec">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f7f3ec;
+    --paper: #fffdf9;
+    --ink: #3d3530;
+    --muted: #8a7f76;
+    --accent: #b08d6e;
+    --accent-soft: #eadfd2;
+    --line: #e7ddd1;
+    --sun: #c9675a;
+    --sat: #5a7bc9;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    background: #e9e3da;
+    color: var(--ink);
+    font-family: "Gowun Batang", serif;
+    line-height: 1.8;
+    word-break: keep-all;
+  }
+  main {
+    max-width: 440px;
+    margin: 0 auto;
+    background: var(--bg);
+    min-height: 100vh;
+    overflow: hidden;
+    box-shadow: 0 0 40px rgba(0,0,0,.06);
+  }
+  section { padding: clamp(56px, 16vw, 72px) clamp(20px, 7vw, 28px); text-align: center; }
+  img { max-width: 100%; }
+  section + section { border-top: 1px solid var(--line); }
+  .eyebrow {
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    letter-spacing: .2em;
+    color: var(--accent);
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  h2 { font-size: 20px; font-weight: 700; margin-bottom: 32px; letter-spacing: .05em; }
+  .muted { color: var(--muted); }
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity .9s ease, transform .9s ease; }
+  .reveal.on { opacity: 1; transform: none; }
+
+  /* 커버 */
+  .cover { padding: 0 0 56px; border: 0; }
+  .cover-photo {
+    width: 100%; aspect-ratio: 3 / 4;
+    background: linear-gradient(160deg, #e8dccd, #cdb9a3) center / cover no-repeat;
+    position: relative;
+  }
+  .cover-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .cover-photo .ph {
+    position: absolute; inset: 0; display: grid; place-items: center;
+    font-family: "Cormorant Garamond", serif; font-style: italic; font-size: 26px; color: #fff; opacity: .85;
+  }
+  .cover-names { font-size: clamp(22px, 7vw, 26px); margin-top: 40px; letter-spacing: .12em; padding: 0 16px; }
+  .cover-names span { color: var(--accent); margin: 0 10px; font-size: 18px; vertical-align: middle; }
+  .cover-date { margin-top: 12px; color: var(--muted); font-size: 15px; }
+
+  /* 인사말 */
+  .greeting p { font-size: 15.5px; white-space: pre-line; }
+  .parents { margin-top: 44px; font-size: 16px; line-height: 2.2; }
+  .parents b { font-weight: 700; margin-left: 6px; }
+  .parents small { color: var(--muted); font-size: 13px; margin: 0 4px; }
+  .contact-btn {
+    margin-top: 28px; padding: 10px 22px; border: 1px solid var(--accent);
+    background: transparent; color: var(--accent); border-radius: 999px;
+    font: inherit; font-size: 14px; cursor: pointer;
+  }
+
+  /* 달력 */
+  .when-text { font-size: 16px; margin-bottom: 28px; }
+  .calendar { background: var(--paper); border-radius: 16px; padding: 24px 16px; border: 1px solid var(--line); }
+  .calendar .month { font-family: "Cormorant Garamond", serif; font-size: 22px; margin-bottom: 14px; }
+  .cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); row-gap: 6px; font-size: 14px; }
+  .cal-grid .h { color: var(--muted); font-size: 12px; padding-bottom: 6px; }
+  .cal-grid div { height: 36px; display: grid; place-items: center; }
+  .cal-grid .sun { color: var(--sun); }
+  .cal-grid .sat { color: var(--sat); }
+  .cal-grid .day-on { background: var(--accent); color: #fff; border-radius: 50%; width: 36px; max-width: 100%; margin: 0 auto; font-weight: 700; }
+  .dday { margin-top: 28px; font-size: 15px; }
+  .dday-boxes { display: flex; justify-content: center; gap: clamp(6px, 2.5vw, 10px); margin-bottom: 16px; }
+  .dday-boxes div { background: var(--paper); border: 1px solid var(--line); border-radius: 10px; padding: 8px 0; flex: 1; max-width: 64px; }
+  .dday-boxes b { display: block; font-size: 20px; font-family: "Cormorant Garamond", serif; }
+  .dday-boxes small { font-size: 11px; color: var(--muted); letter-spacing: .1em; }
+  .dday em { color: var(--accent); font-style: normal; font-weight: 700; }
+
+  /* 갤러리 */
+  .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; }
+  .gallery button {
+    aspect-ratio: 1; border: 0; padding: 0; cursor: pointer; overflow: hidden;
+    background: linear-gradient(135deg, #e8dccd, #d6c5b2);
+  }
+  .gallery img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s; }
+  .gallery button:active img { transform: scale(1.05); }
+  .lightbox {
+    position: fixed; inset: 0; background: rgba(20,16,14,.94); z-index: 50;
+    display: none; align-items: center; justify-content: center; touch-action: pan-y;
+  }
+  .lightbox.open { display: flex; }
+  .lightbox img { max-width: 100%; max-height: 82vh; object-fit: contain; user-select: none; }
+  .lightbox .lb-btn {
+    position: absolute; background: none; border: 0; color: #fff; font-size: 30px;
+    width: 52px; height: 52px; cursor: pointer; opacity: .8;
+  }
+  .lb-close { top: 12px; right: 8px; }
+  .lb-prev { left: 4px; top: 50%; transform: translateY(-50%); }
+  .lb-next { right: 4px; top: 50%; transform: translateY(-50%); }
+  .lb-count { position: absolute; bottom: 24px; color: #fff; opacity: .7; font-size: 14px; }
+
+  /* 오시는 길 */
+  .venue-name { font-size: 18px; font-weight: 700; }
+  .venue-addr { color: var(--muted); font-size: 14px; margin: 4px 0 20px; }
+  .map { width: 100%; aspect-ratio: 4 / 3; border: 0; border-radius: 12px; background: var(--accent-soft); }
+  .map-links { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 12px; }
+  .map-links a, .copy-addr {
+    display: block; padding: 10px 0; font-size: 13px; text-decoration: none; color: var(--ink);
+    background: var(--paper); border: 1px solid var(--line); border-radius: 8px; font-family: inherit; cursor: pointer;
+  }
+  .transport { text-align: left; margin-top: 36px; }
+  .transport dt { font-weight: 700; color: var(--accent); font-size: 15px; margin-top: 20px; }
+  .transport dd { font-size: 14px; white-space: pre-line; }
+
+  /* 계좌 */
+  .accounts { text-align: left; display: grid; gap: 12px; }
+  .acc-group { background: var(--paper); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+  .acc-group summary {
+    list-style: none; padding: 16px 20px; cursor: pointer; font-weight: 700;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .acc-group summary::-webkit-details-marker { display: none; }
+  .acc-group summary::after { content: "⌄"; color: var(--muted); transition: transform .3s; }
+  .acc-group[open] summary::after { transform: rotate(180deg); }
+  .acc-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px clamp(14px, 5vw, 20px); border-top: 1px solid var(--line); font-size: 14px; }
+  .acc-row > div { min-width: 0; overflow-wrap: anywhere; }
+  .acc-row small { color: var(--muted); display: block; font-size: 12px; }
+  .acc-row button {
+    flex: none; padding: 6px 14px; border: 1px solid var(--line); background: var(--bg);
+    border-radius: 6px; font: inherit; font-size: 12px; cursor: pointer; color: var(--ink);
+  }
+
+  /* 연락처 모달 */
+  .modal { position: fixed; inset: 0; background: rgba(20,16,14,.5); z-index: 40; display: none; align-items: flex-end; justify-content: center; }
+  .modal.open { display: flex; }
+  .modal-card { background: var(--paper); width: 100%; max-width: 440px; border-radius: 20px 20px 0 0; padding: 28px 24px calc(28px + env(safe-area-inset-bottom)); }
+  .modal-card h3 { text-align: center; font-size: 17px; margin-bottom: 16px; }
+  .contact-row { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
+  .contact-row small { color: var(--muted); margin-right: 6px; }
+  .contact-icons { display: flex; gap: 8px; }
+  .contact-row a {
+    display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%;
+    border: 1px solid var(--line); background: var(--bg); color: var(--accent); text-decoration: none;
+  }
+  .contact-row a:active { background: var(--accent-soft); }
+  .contact-row a svg, .contact-row a img { width: 18px; height: 18px; display: block; object-fit: contain; }
+  .modal-close { width: 100%; margin-top: 18px; padding: 12px; border: 0; background: var(--accent-soft); border-radius: 10px; font: inherit; cursor: pointer; color: var(--ink); }
+
+  /* 공유 & 푸터 */
+  .share { display: flex; gap: 8px; justify-content: center; }
+  .share button { padding: 12px 22px; border-radius: 999px; border: 1px solid var(--accent); background: var(--accent); color: #fff; font: inherit; font-size: 14px; cursor: pointer; }
+  .share button.ghost { background: transparent; color: var(--accent); }
+  footer { padding: 32px 0 48px; text-align: center; font-size: 12px; color: var(--muted); }
+
+  /* 참석 여부 & 방명록 폼 */
+  .form { display: grid; gap: 10px; text-align: left; }
+  .form input, .form select, .form textarea {
+    width: 100%; padding: 12px 14px; border: 1px solid var(--line); border-radius: 10px;
+    background: var(--paper); font: inherit; font-size: 15px; color: var(--ink); outline: none;
+  }
+  .form input:focus, .form select:focus, .form textarea:focus { border-color: var(--accent); }
+  .form textarea { resize: vertical; min-height: 84px; }
+  .form label.lbl { font-size: 13px; color: var(--muted); margin: 6px 0 -4px 2px; }
+  .seg { display: flex; gap: 6px; }
+  .seg label { flex: 1; }
+  .seg input { position: absolute; opacity: 0; pointer-events: none; }
+  .seg span {
+    display: block; text-align: center; padding: 10px 0; border: 1px solid var(--line);
+    border-radius: 10px; background: var(--paper); font-size: 14px; cursor: pointer;
+  }
+  .seg input:checked + span { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .seg input:focus-visible + span { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .submit {
+    margin-top: 6px; padding: 14px; border: 0; border-radius: 10px; background: var(--accent);
+    color: #fff; font: inherit; font-size: 15px; cursor: pointer;
+  }
+  .submit:disabled { opacity: .5; cursor: default; }
+  .gb-list { list-style: none; text-align: left; margin-top: 28px; display: grid; gap: 10px; }
+  .gb-list li { background: var(--paper); border: 1px solid var(--line); border-radius: 12px; padding: 14px 18px; }
+  .gb-list .who { display: flex; justify-content: space-between; font-size: 13px; color: var(--muted); margin-bottom: 4px; }
+  .gb-list .who b { color: var(--ink); }
+  .gb-list p { font-size: 14.5px; white-space: pre-line; overflow-wrap: anywhere; }
+  .more { margin-top: 14px; background: none; border: 0; color: var(--muted); font: inherit; font-size: 14px; cursor: pointer; text-decoration: underline; }
+  .notice { font-size: 13px; color: var(--muted); }
+
+  .toast {
+    position: fixed; left: 50%; bottom: 40px; transform: translate(-50%, 20px);
+    background: rgba(40,34,30,.9); color: #fff; padding: 10px 20px; border-radius: 999px;
+    font-size: 14px; opacity: 0; pointer-events: none; transition: all .3s; z-index: 60;
+  }
+  .toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+  /* ===== 반응형 ===== */
+  /* 태블릿 이상: 연락처 창을 화면 가운데에 */
+  @media (min-width: 640px) {
+    .modal { align-items: center; }
+    .modal-card { max-width: 400px; border-radius: 20px; padding-bottom: 28px; }
+    .gallery { gap: 6px; }
+    .lightbox img { max-width: 88vw; max-height: 86vh; }
+    .lb-prev { left: 24px; } .lb-next { right: 24px; } .lb-close { top: 20px; right: 24px; }
+  }
+  /* 태블릿: 조금 넓은 한 줄 */
+  @media (min-width: 640px) and (max-width: 1023px) {
+    main { max-width: 600px; }
+    .cover-photo { aspect-ratio: 4 / 5; }
+    section { padding: 88px 48px; }
+  }
+  /* PC: 왼쪽 커버 고정 + 오른쪽 내용 스크롤 */
+  @media (min-width: 1024px) {
+    main {
+      max-width: none; box-shadow: none; overflow: visible;
+      display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    }
+    main > * { grid-column: 2; }
+    main > section:not(.cover), main > footer { padding-inline: max(56px, calc((50vw - 520px) / 2)); }
+    main > section:not(.cover) { padding-block: 96px; }
+    .cover {
+      grid-column: 1; grid-row: 1 / span 30; align-self: start;
+      position: sticky; top: 0; height: 100vh; padding: 0 32px 72px;
+      display: flex; flex-direction: column; justify-content: flex-end; overflow: hidden;
+    }
+    .cover + section { border-top: 0; }
+    .cover-photo { position: absolute; inset: 0; aspect-ratio: auto; }
+    .cover::after {
+      content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 50%; z-index: 1;
+      background: linear-gradient(transparent, rgba(30, 24, 20, .55)); pointer-events: none;
+    }
+    .cover-names, .cover-date { position: relative; z-index: 2; color: #fff; text-shadow: 0 1px 12px rgba(0,0,0,.25); }
+    .cover-names { font-size: 34px; }
+    .cover-names span { color: #fff; }
+    .cover-date { color: rgba(255,255,255,.9); font-size: 16px; }
+    .cover .ph { font-size: 40px; padding-bottom: 20vh; }
+    .greeting p { font-size: 16.5px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+  }
+</style>
+</head>
+<body>
+<main id="app"></main>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-label="사진 크게 보기">
+  <button class="lb-btn lb-close" aria-label="닫기">✕</button>
+  <button class="lb-btn lb-prev" aria-label="이전">‹</button>
+  <img alt="">
+  <button class="lb-btn lb-next" aria-label="다음">›</button>
+  <div class="lb-count"></div>
+</div>
+<div class="modal" id="contactModal" role="dialog" aria-label="연락하기">
+  <div class="modal-card"></div>
+</div>
+<div class="toast" id="toast"></div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.49.4/dist/umd/supabase.js"></script>
+<!-- ✏️ 청첩장 내용은 config.js 또는 관리자 페이지(admin.html)에서 수정하세요 -->
+<script src="config.js"></script>
+<script>
+const $ = (s, el = document) => el.querySelector(s);
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const DAYS = ["일", "월", "화", "수", "목", "금", "토"];
+
+/* 아이콘: 이미지 파일을 쓰려면 경로를 적으세요 (예: "images/icons/phone.png").
+   비워두면 아래 기본 SVG 아이콘이 나옵니다. */
+const ICON_FILES = { phone: "", sms: "" };
+const ICON_SVG = {
+  phone: '<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/>',
+  sms: '<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>',
+};
+const icon = (name) => ICON_FILES[name]
+  ? `<img src="${esc(ICON_FILES[name])}" alt="">`
+  : `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICON_SVG[name]}</svg>`;
+
+/* 저장된 설정 불러오기 (실패하면 config.js 기본값) */
+async function loadConfig() {
+  if (!sb) return DEFAULT_CONFIG;
+  try {
+    // 3초 안에 응답이 없으면 기본값으로 먼저 보여줍니다 (빈 화면 방지)
+    const timeout = new Promise((_, reject) => setTimeout(() => reject(new Error("timeout")), 3000));
+    const { data, error } = await Promise.race([
+      sb.from("settings").select("data").eq("id", 1).maybeSingle(),
+      timeout,
+    ]);
+    if (error) throw error;
+    return { ...DEFAULT_CONFIG, ...(data?.data || {}) };
+  } catch (e) {
+    console.warn("설정을 불러오지 못해 기본값을 사용합니다", e);
+    return DEFAULT_CONFIG;
+  }
+}
+
+/* 토스트 & 복사 */
+let toastTimer;
+function toast(msg) {
+  const t = $("#toast"); t.textContent = msg; t.classList.add("show");
+  clearTimeout(toastTimer); toastTimer = setTimeout(() => t.classList.remove("show"), 1800);
+}
+async function copy(text) {
+  try { await navigator.clipboard.writeText(text); }
+  catch {
+    const ta = document.createElement("textarea"); ta.value = text; document.body.appendChild(ta);
+    ta.select(); document.execCommand("copy"); ta.remove();
+  }
+  toast("복사되었습니다");
+}
+document.addEventListener("click", (e) => {
+  const btn = e.target.closest("[data-copy]");
+  if (btn) copy(btn.dataset.copy);
+});
+
+function render(C) {
+  const g = C.groom, b = C.bride;
+  const wedding = new Date(C.date);
+  // 한국 시간 기준으로 날짜 정보 추출
+  const kst = new Date(wedding.getTime() + 9 * 3600 * 1000);
+  const Y = kst.getUTCFullYear(), M = kst.getUTCMonth() + 1, D = kst.getUTCDate();
+  const H = kst.getUTCHours(), MIN = kst.getUTCMinutes(), DOW = kst.getUTCDay();
+  const timeText = `${H < 12 ? "오전" : "오후"} ${H % 12 || 12}시${MIN ? ` ${MIN}분` : ""}`;
+  const dateText = `${Y}년 ${M}월 ${D}일 ${DAYS[DOW]}요일 ${timeText}`;
+  const q = encodeURIComponent(C.venue.mapQuery || C.venue.address);
+  document.title = `${g.name} ♥ ${b.name} 결혼합니다`;
+
+  function calendarHTML() {
+    const first = new Date(Date.UTC(Y, M - 1, 1)).getUTCDay();
+    const last = new Date(Date.UTC(Y, M, 0)).getUTCDate();
+    let cells = DAYS.map((d, i) => `<div class="h ${i === 0 ? "sun" : i === 6 ? "sat" : ""}">${d}</div>`).join("");
+    cells += "<div></div>".repeat(first);
+    for (let d = 1; d <= last; d++) {
+      const dow = (first + d - 1) % 7;
+      const cls = d === D ? "day-on" : dow === 0 ? "sun" : dow === 6 ? "sat" : "";
+      cells += `<div class="${cls}">${d}</div>`;
+    }
+    return `<div class="calendar"><div class="month">${Y}. ${String(M).padStart(2, "0")}</div><div class="cal-grid">${cells}</div></div>`;
+  }
+
+  function accountGroup(title, list) {
+    if (!list?.length) return "";
+    return `<details class="acc-group"><summary>${title}</summary>${list.map((a) => `
+      <div class="acc-row"><div><small>${esc(a.role)} ${esc(a.name)}</small>${esc(a.bank)} ${esc(a.number)}</div>
+      <button data-copy="${esc(a.bank)} ${esc(a.number)}">복사</button></div>`).join("")}</details>`;
+  }
+
+  const seg = (name, opts) => `<div class="seg">${opts.map(([v, l], i) =>
+    `<label><input type="radio" name="${name}" value="${v}" ${i === 0 ? "checked" : ""}><span>${l}</span></label>`).join("")}</div>`;
+  const offline = !sb ? `<p class="notice">준비 중입니다.</p>` : "";
+
+  $("#app").innerHTML = `
+  <section class="cover">
+    <div class="cover-photo">
+      ${C.coverImage ? `<img src="${esc(C.coverImage)}" alt="웨딩 사진" onerror="this.remove()">` : ""}
+      <div class="ph">Our Wedding Day</div>
+    </div>
+    <div class="cover-names reveal">${esc(g.name)}<span>&</span>${esc(b.name)}</div>
+    <div class="cover-date reveal">${dateText}<br>${esc(C.venue.name)} ${esc(C.venue.hall)}</div>
+  </section>
+
+  <section class="greeting">
+    <div class="eyebrow reveal">Invitation</div>
+    <h2 class="reveal">소중한 분들을 초대합니다</h2>
+    <p class="reveal">${esc(C.greeting)}</p>
+    <div class="parents reveal">
+      <div>${esc(g.father)} · ${esc(g.mother)}<small>의 ${esc(g.relation)}</small><b>${esc(g.name)}</b></div>
+      <div>${esc(b.father)} · ${esc(b.mother)}<small>의 ${esc(b.relation)}</small><b>${esc(b.name)}</b></div>
+    </div>
+    <button class="contact-btn reveal" id="openContact">연락하기</button>
+  </section>
+
+  <section>
+    <div class="eyebrow reveal">Wedding Day</div>
+    <h2 class="reveal">예식 일시</h2>
+    <p class="when-text reveal">${dateText}</p>
+    <div class="reveal">${calendarHTML()}</div>
+    <div class="dday reveal" id="dday"></div>
+  </section>
+
+  ${C.gallery?.length ? `<section>
+    <div class="eyebrow reveal">Gallery</div>
+    <h2 class="reveal">우리의 순간</h2>
+    <div class="gallery reveal">${C.gallery.map((src, i) =>
+      `<button aria-label="사진 ${i + 1} 크게 보기"><img src="${esc(src)}" alt="" loading="lazy" onerror="this.remove()"></button>`).join("")}
+    </div>
+  </section>` : ""}
+
+  <section>
+    <div class="eyebrow reveal">Location</div>
+    <h2 class="reveal">오시는 길</h2>
+    <div class="venue-name reveal">${esc(C.venue.name)} ${esc(C.venue.hall)}</div>
+    <div class="venue-addr reveal">${esc(C.venue.address)}${C.venue.tel ? `<br>Tel. <a href="tel:${esc(C.venue.tel)}" style="color:inherit">${esc(C.venue.tel)}</a>` : ""}</div>
+    <iframe class="map reveal" loading="lazy" title="예식장 지도"
+      src="https://maps.google.com/maps?q=${q}&z=16&output=embed"></iframe>
+    <div class="map-links reveal">
+      <a href="https://map.naver.com/p/search/${q}" target="_blank" rel="noopener">네이버지도</a>
+      <a href="https://map.kakao.com/link/search/${q}" target="_blank" rel="noopener">카카오맵</a>
+      <button class="copy-addr" data-copy="${esc(C.venue.address)}">주소 복사</button>
+    </div>
+    <dl class="transport reveal">${(C.transport || []).map((t) => `<dt>${esc(t.title)}</dt><dd>${esc(t.desc)}</dd>`).join("")}</dl>
+  </section>
+
+  <section>
+    <div class="eyebrow reveal">RSVP</div>
+    <h2 class="reveal">참석 여부 전달</h2>
+    <p class="muted reveal" style="font-size:14px;margin:-16px 0 28px">원활한 예식 준비를 위해<br>참석 여부를 미리 알려주시면 감사하겠습니다.</p>
+    <form class="form reveal" id="rsvpForm">
+      ${seg("side", [["groom", "신랑측"], ["bride", "신부측"]])}
+      ${seg("attend", [["true", "참석할게요"], ["false", "참석이 어려워요"]])}
+      <input name="name" placeholder="성함" required maxlength="20" autocomplete="name">
+      <input name="phone4" placeholder="연락처 뒷자리 4자리 (선택)" maxlength="4" inputmode="numeric" pattern="[0-9]{0,4}">
+      <div id="attendFields" class="form">
+        <label class="lbl" for="rsvpCount">참석 인원 (본인 포함)</label>
+        <select name="count" id="rsvpCount">${Array.from({ length: 10 }, (_, i) => `<option value="${i + 1}">${i + 1}명</option>`).join("")}</select>
+        <label class="lbl">식사 여부</label>
+        ${seg("meal", [["yes", "식사해요"], ["no", "안 해요"], ["undecided", "미정"]])}
+      </div>
+      <textarea name="note" placeholder="전하실 말씀 (선택)" maxlength="200"></textarea>
+      <button class="submit" ${sb ? "" : "disabled"}>참석 여부 전달하기</button>
+      ${offline}
+    </form>
+  </section>
+
+  <section>
+    <div class="eyebrow reveal">Gift</div>
+    <h2 class="reveal">마음 전하실 곳</h2>
+    <p class="muted reveal" style="font-size:14px;margin:-16px 0 28px">참석이 어려우신 분들을 위해 기재했습니다.<br>너그러운 마음으로 양해 부탁드립니다.</p>
+    <div class="accounts reveal">
+      ${accountGroup("신랑측 계좌번호", C.accounts?.groom)}
+      ${accountGroup("신부측 계좌번호", C.accounts?.bride)}
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow reveal">Guestbook</div>
+    <h2 class="reveal">축하 메시지</h2>
+    <form class="form reveal" id="gbForm">
+      <input name="name" placeholder="성함" required maxlength="20" autocomplete="name">
+      <textarea name="message" placeholder="두 사람에게 축하의 한마디를 남겨주세요" required maxlength="500"></textarea>
+      <button class="submit" ${sb ? "" : "disabled"}>남기기</button>
+      ${offline}
+    </form>
+    <ul class="gb-list" id="gbList"></ul>
+    <button class="more" id="gbMore" hidden>더보기</button>
+  </section>
+
+  <section>
+    <div class="share reveal">
+      <button id="shareBtn">청첩장 공유하기</button>
+      <button class="ghost" id="copyLink">링크 복사</button>
+    </div>
+  </section>
+  <footer>${esc(g.name)} & ${esc(b.name)}</footer>
+  `;
+
+  /* D-day 카운트다운 */
+  (function tick() {
+    const diff = wedding - Date.now();
+    const el = $("#dday");
+    if (diff <= 0) {
+      const days = Math.floor(-diff / 86400000);
+      el.innerHTML = days === 0 ? `오늘은 <em>${esc(g.name)} ♥ ${esc(b.name)}</em>의 결혼식 날입니다` : `<em>${esc(g.name)} ♥ ${esc(b.name)}</em>가 함께한 지 <em>${days}일</em>`;
+      return;
+    }
+    const d = Math.floor(diff / 86400000), h = Math.floor(diff / 3600000) % 24,
+          m = Math.floor(diff / 60000) % 60, s = Math.floor(diff / 1000) % 60;
+    el.innerHTML = `<div class="dday-boxes">${[[d, "DAYS"], [h, "HOUR"], [m, "MIN"], [s, "SEC"]]
+      .map(([v, l]) => `<div><b>${v}</b><small>${l}</small></div>`).join("")}</div>
+      ${esc(g.name)} ♥ ${esc(b.name)}의 결혼식이 <em>${d + 1}일</em> 남았습니다`;
+    setTimeout(tick, 1000);
+  })();
+
+  /* 스크롤 등장 애니메이션 */
+  const io = new IntersectionObserver((entries) => entries.forEach((e) => {
+    if (e.isIntersecting) { e.target.classList.add("on"); io.unobserve(e.target); }
+  }), { threshold: 0.15 });
+  document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+  /* 공유 */
+  $("#copyLink").onclick = () => copy(location.href);
+  $("#shareBtn").onclick = async () => {
+    if (navigator.share) {
+      try { await navigator.share({ title: document.title, text: dateText, url: location.href }); } catch {}
+    } else copy(location.href);
+  };
+
+  /* 연락하기 */
+  const contacts = [
+    ["신랑", g.name, g.phone], ["신랑 아버지", g.father, g.fatherPhone], ["신랑 어머니", g.mother, g.motherPhone],
+    ["신부", b.name, b.phone], ["신부 아버지", b.father, b.fatherPhone], ["신부 어머니", b.mother, b.motherPhone],
+  ].filter((c) => c[2]);
+  const modal = $("#contactModal");
+  $(".modal-card", modal).innerHTML = `<h3>연락하기</h3>${contacts.map(([r, n, p]) => {
+    const tel = p.replace(/[^0-9]/g, "");
+    return `<div class="contact-row"><span><small>${esc(r)}</small>${esc(n)}</span>
+      <span class="contact-icons">
+        <a href="tel:${tel}" aria-label="${esc(n)}에게 전화">${icon("phone")}</a>
+        <a href="sms:${tel}" aria-label="${esc(n)}에게 문자">${icon("sms")}</a>
+      </span></div>`;
+  }).join("")}<button class="modal-close">닫기</button>`;
+  $("#openContact").onclick = () => modal.classList.add("open");
+  modal.onclick = (e) => { if (e.target === modal || e.target.classList.contains("modal-close")) modal.classList.remove("open"); };
+
+  setupGallery();
+  setupRsvp();
+  setupGuestbook();
+}
+
+/* 갤러리 라이트박스 (스와이프 지원) */
+function setupGallery() {
+  const gal = $(".gallery"); if (!gal) return;
+  const lb = $("#lightbox"), lbImg = $("img", lb);
+  const shots = () => [...document.querySelectorAll(".gallery img")].map((i) => i.getAttribute("src"));
+  let cur = 0;
+  function show(i) {
+    const list = shots(); if (!list.length) return;
+    cur = (i + list.length) % list.length;
+    lbImg.src = list[cur];
+    $(".lb-count", lb).textContent = `${cur + 1} / ${list.length}`;
+  }
+  gal.addEventListener("click", (e) => {
+    const btn = e.target.closest("button"); if (!btn || !$("img", btn)) return;
+    show(shots().indexOf($("img", btn).getAttribute("src")));
+    lb.classList.add("open"); document.body.style.overflow = "hidden";
+  });
+  function closeLb() { lb.classList.remove("open"); document.body.style.overflow = ""; }
+  $(".lb-close", lb).onclick = closeLb;
+  $(".lb-prev", lb).onclick = () => show(cur - 1);
+  $(".lb-next", lb).onclick = () => show(cur + 1);
+  lb.addEventListener("click", (e) => { if (e.target === lb) closeLb(); });
+  let sx = 0;
+  lb.addEventListener("touchstart", (e) => { sx = e.touches[0].clientX; }, { passive: true });
+  lb.addEventListener("touchend", (e) => {
+    const dx = e.changedTouches[0].clientX - sx;
+    if (Math.abs(dx) > 50) show(cur + (dx < 0 ? 1 : -1));
+  });
+  document.addEventListener("keydown", (e) => {
+    if (!lb.classList.contains("open")) return;
+    if (e.key === "Escape") closeLb();
+    if (e.key === "ArrowLeft") show(cur - 1);
+    if (e.key === "ArrowRight") show(cur + 1);
+  });
+}
+
+/* 참석 여부 */
+function setupRsvp() {
+  const form = $("#rsvpForm");
+  const sync = () => { $("#attendFields").hidden = form.attend.value !== "true"; };
+  form.addEventListener("change", sync); sync();
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    if (!sb) return;
+    const attend = form.attend.value === "true";
+    const btn = $(".submit", form); btn.disabled = true;
+    const { error } = await sb.from("rsvp").insert({
+      side: form.side.value,
+      name: form.elements.name.value.trim(),
+      phone4: form.phone4.value.trim() || null,
+      attend,
+      count: attend ? Number(form.count.value) : 0,
+      meal: attend ? form.meal.value : null,
+      note: form.note.value.trim() || null,
+    });
+    btn.disabled = false;
+    if (error) { console.error(error); toast("전송에 실패했어요. 다시 시도해 주세요"); return; }
+    form.reset(); sync();
+    toast("참석 여부가 전달되었습니다. 감사합니다!");
+  });
+}
+
+/* 방명록 */
+function setupGuestbook() {
+  const list = $("#gbList"), more = $("#gbMore"), PAGE = 10;
+  let offset = 0;
+  const fmt = (iso) => { const d = new Date(iso); return `${d.getMonth() + 1}.${d.getDate()}`; };
+  async function load(reset) {
+    if (!sb) return;
+    if (reset) { offset = 0; list.innerHTML = ""; }
+    const { data, error } = await sb.from("guestbook").select("id,name,message,created_at")
+      .order("created_at", { ascending: false }).range(offset, offset + PAGE - 1);
+    if (error) { console.error(error); return; }
+    list.insertAdjacentHTML("beforeend", data.map((r) =>
+      `<li><div class="who"><b>${esc(r.name)}</b><span>${fmt(r.created_at)}</span></div><p>${esc(r.message)}</p></li>`).join(""));
+    offset += data.length;
+    more.hidden = data.length < PAGE;
+  }
+  more.onclick = () => load(false);
+  load(true);
+
+  const form = $("#gbForm");
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    if (!sb) return;
+    const btn = $(".submit", form); btn.disabled = true;
+    const { error } = await sb.from("guestbook").insert({ name: form.elements.name.value.trim(), message: form.message.value.trim() });
+    btn.disabled = false;
+    if (error) { console.error(error); toast("등록에 실패했어요. 다시 시도해 주세요"); return; }
+    form.reset(); toast("축하 메시지가 등록되었습니다");
+    load(true);
+  });
+}
+
+loadConfig().then(render);
+</script>
+</body>
+</html>

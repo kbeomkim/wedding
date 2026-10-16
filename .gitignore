@@ -1,0 +1,4 @@
+# 사이트에 필요 없는 파일 (내 컴퓨터에만 보관, GitHub에 올리지 않음)
+supabase/
+SETUP.md
+images/README.txt
