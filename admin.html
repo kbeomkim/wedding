@@ -87,7 +87,13 @@
   .savebar .msg.dirty { color: var(--danger); }
 
   /* 로그인 */
-  .center { min-height: 80vh; display: grid; place-items: center; }
+  /* 로그인·안내 화면: 관리 화면용 여백(사이드 메뉴, 저장 바) 없이 화면 정중앙 */
+  .wrap.center {
+    max-width: none; min-height: 100vh; min-height: 100dvh;
+    padding: 24px 16px; display: grid; place-items: center;
+  }
+  .wrap.center > * { width: 100%; max-width: 420px; }
+  .wrap.center > .login { max-width: 380px; }
   .login { width: 100%; max-width: 360px; }
   .login h1 { font-family: "Gowun Batang", serif; font-size: 22px; text-align: center; margin-bottom: 20px; }
   .login form { display: grid; gap: 10px; }
