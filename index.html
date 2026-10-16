@@ -432,7 +432,7 @@ function render(C) {
     <h2 class="reveal">참석 여부 전달</h2>
     <p class="muted reveal" style="font-size:14px;margin:-16px 0 28px">원활한 예식 준비를 위해<br>참석 여부를 미리 알려주시면 감사하겠습니다.</p>
     <form class="form reveal" id="rsvpForm">
-      ${seg("side", [["groom", "신랑측"], ["bride", "신부측"]])}
+      ${seg("side", [["groom", "신랑 측"], ["bride", "신부 측"]])}
       ${seg("attend", [["true", "참석할게요"], ["false", "참석이 어려워요"]])}
       <input name="name" placeholder="성함" required maxlength="20" autocomplete="name">
       <input name="phone4" placeholder="연락처 뒷자리 4자리 (선택)" maxlength="4" inputmode="numeric" pattern="[0-9]{0,4}">
@@ -453,8 +453,8 @@ function render(C) {
     <h2 class="reveal">마음 전하실 곳</h2>
     <p class="muted reveal" style="font-size:14px;margin:-16px 0 28px">참석이 어려우신 분들을 위해 기재했습니다.<br>너그러운 마음으로 양해 부탁드립니다.</p>
     <div class="accounts reveal">
-      ${accountGroup("신랑측 계좌번호", C.accounts?.groom)}
-      ${accountGroup("신부측 계좌번호", C.accounts?.bride)}
+      ${accountGroup("신랑 측 계좌번호", C.accounts?.groom)}
+      ${accountGroup("신부 측 계좌번호", C.accounts?.bride)}
     </div>
   </section>
 

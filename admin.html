@@ -372,8 +372,8 @@ function renderInfo() {
     </div>`;
 
   $("#tab-info").innerHTML = `
-    ${person("groom", "신랑측")}
-    ${person("bride", "신부측")}
+    ${person("groom", "신랑 측")}
+    ${person("bride", "신부 측")}
     <div class="card wide"><h2>예식 정보</h2><div class="grid">
       <label class="f"><span>예식 일시 (한국 시간)</span><input type="datetime-local" id="dateInput" value="${esc(String(state.date).slice(0, 16))}"></label>
       ${field("venue.tel", "예식장 전화번호", 'type="tel"')}
@@ -393,8 +393,8 @@ function renderInfo() {
           <div class="row-head"><button class="btn sm danger" data-del="transport.${i}">삭제</button></div>
         </div>`).join("") || `<div class="empty">등록된 안내가 없습니다</div>`}
     </div>
-    ${accList("groom", "신랑측 계좌")}
-    ${accList("bride", "신부측 계좌")}
+    ${accList("groom", "신랑 측 계좌")}
+    ${accList("bride", "신부 측 계좌")}
   `;
 }
 
@@ -519,7 +519,7 @@ $("#tab-photos").addEventListener("click", async (e) => {
 /* ---------- 참석 여부 ---------- */
 let rsvps = [], rsvpFilter = "all";
 const MEAL = { yes: "식사", no: "식사 안 함", undecided: "식사 미정" };
-const SIDE = { groom: "신랑측", bride: "신부측" };
+const SIDE = { groom: "신랑 측", bride: "신부 측" };
 const fmtDate = (iso) => new Date(iso).toLocaleString("ko-KR", { month: "numeric", day: "numeric", hour: "2-digit", minute: "2-digit" });
 
 async function loadRsvp() {
@@ -539,8 +539,8 @@ function renderRsvp() {
   $("#tab-rsvp").innerHTML = `
     <div class="stats" style="margin-top:16px">
       <div class="stat"><small>총 참석 인원</small><b>${sum(yes)}<em>명</em></b><div class="sub">응답 ${rsvps.length}건 · 불참 ${rsvps.length - yes.length}건</div></div>
-      <div class="stat"><small>신랑측</small><b>${sum(bySide("groom"))}<em>명</em></b><div class="sub">${bySide("groom").length}건</div></div>
-      <div class="stat"><small>신부측</small><b>${sum(bySide("bride"))}<em>명</em></b><div class="sub">${bySide("bride").length}건</div></div>
+      <div class="stat"><small>신랑 측</small><b>${sum(bySide("groom"))}<em>명</em></b><div class="sub">${bySide("groom").length}건</div></div>
+      <div class="stat"><small>신부 측</small><b>${sum(bySide("bride"))}<em>명</em></b><div class="sub">${bySide("bride").length}건</div></div>
       <div class="stat"><small>식사 인원</small><b>${sum(meal)}<em>명</em></b><div class="sub">미정 ${sum(yes.filter((r) => r.meal === "undecided"))}명</div></div>
     </div>
     <div class="card">
@@ -551,7 +551,7 @@ function renderRsvp() {
         </span>
       </h2>
       <div class="filters" style="margin-bottom:12px">
-        ${[["all", "전체"], ["groom", "신랑측 참석"], ["bride", "신부측 참석"], ["no", "불참"]].map(([v, l]) =>
+        ${[["all", "전체"], ["groom", "신랑 측 참석"], ["bride", "신부 측 참석"], ["no", "불참"]].map(([v, l]) =>
           `<button data-filter="${v}" class="${rsvpFilter === v ? "on" : ""}">${l}</button>`).join("")}
       </div>
       <ul class="list">${list.map((r) => `
