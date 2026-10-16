@@ -62,7 +62,8 @@
     font: inherit; color: var(--ink); background: #fff; outline: none;
   }
   input:focus, textarea:focus, select:focus { border-color: var(--accent); }
-  textarea { resize: vertical; }
+  /* 크기 조절 손잡이 없음 + 글이 길어지면 자동으로 늘어남 (autoGrow) */
+  textarea { resize: none; overflow: hidden; }
   .btn {
     display: inline-flex; align-items: center; justify-content: center; gap: 6px;
     padding: 10px 16px; border-radius: 8px; border: 1px solid var(--line); background: #fff;
@@ -301,6 +302,7 @@ $("#tabs").addEventListener("click", (e) => {
   $$("#tabs button").forEach((x) => x.classList.toggle("on", x === b));
   $$("[id^=tab-]").forEach((p) => { p.hidden = p.id !== "tab-" + tab; });
   $("#savebar").hidden = !(tab === "info" || tab === "photos");
+  if (tab === "info") growAll();  // 숨겨져 있던 동안에는 높이를 잴 수 없어서 다시 계산
   if (tab === "rsvp") loadRsvp();
   if (tab === "guestbook") loadGuestbook();
 });
@@ -396,10 +398,20 @@ function renderInfo() {
     ${accList("groom", "신랑 측 계좌")}
     ${accList("bride", "신부 측 계좌")}
   `;
+  growAll();
 }
+
+/* 입력칸 자동 높이: 글자 수에 맞춰 늘어남 (rows 값이 최소 높이) */
+function autoGrow(el) {
+  el.style.height = "auto";
+  el.style.height = el.scrollHeight + (el.offsetHeight - el.clientHeight) + "px";
+}
+const growAll = () => $$("#tab-info textarea").forEach(autoGrow);
+window.addEventListener("resize", growAll);  // 화면 폭이 바뀌면 줄바꿈이 달라지므로 다시 계산
 
 $("#tab-info").addEventListener("input", (e) => {
   const el = e.target;
+  if (el.tagName === "TEXTAREA") autoGrow(el);
   if (el.id === "dateInput") { if (el.value) { state.date = el.value + ":00+09:00"; setDirty(true); } return; }
   if (el.dataset.k) { setPath(state, el.dataset.k, el.value); setDirty(true); }
 });
